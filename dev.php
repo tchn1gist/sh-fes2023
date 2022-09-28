@@ -2,7 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>栄東fes2023|ログイン</title>
+        <title>'23栄東祭|開発者ログイン</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
         <meta http-equiv="Content-Style-Type" content="text/css" />
         <link rel="stylesheet" href="./common/style.css">
