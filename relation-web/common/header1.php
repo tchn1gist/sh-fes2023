@@ -1,29 +1,27 @@
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent " style="box-shadow: 0px 0px 30px 10px rgb(187, 187, 187); margin: 0 auto;">
             <div class="container-fluid mx-5 drop-hover">
               <a class="navbar-brand" href="#">Logo</a>
               <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-3 mb-lg-0 ">
+              <div class="collapse navbar-collapse gnavi__wrap" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-3 mb-lg-0 gnavi__lists">
                   
 
-                  <li class="nav-item dropdown mx-3 btn-group">
+                  <li class="nav-item dropdown mx-3 btn-group gnavi__list">
                     <button type="button" class="btn nav-link" id="navbarDropdown" role="button"  aria-expanded="false" onclick="jump_to_club()" data-toggle="dropdown">ホーム</button>
                     <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"　id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                         <span class="sr-only"></span>
                     </button>
-                    <ul class="dropdown-menu" style="box-shadow: 1px 10px 10px -5px rgba(0,0,0,0.5);" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">文化祭のご案内　</a></li>
-                      <li><a class="dropdown-item" href="#">テーマ「」　</a></li>
-                      <li><a class="dropdown-item" href="#">校長・生徒会長より　</a></li> 
-                      <li><a class="dropdown-item" href="#">「Gateway」の導入　</a></li>                     
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">サイトの使い方　</a></li>
-                      <li><a class="dropdown-item" href="#">サイト使用時の注意　</a></li>
-                      <li><a class="dropdown-item" href="#">サイト作成者より　</a></li> 
+                    <ul class="dropdown-menu dropdown__lists" style="box-shadow: 1px 10px 10px -5px rgba(0,0,0,0.5);" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item dropdown__list" href="#">文化祭のご案内　</a></li>
+                      <li><a class="dropdown-item dropdown__list" href="#">テーマ「」　</a></li>
+                      <li><a class="dropdown-item dropdown__list" href="#">校長・生徒会長より　</a></li> 
+                      <li><a class="dropdown-item dropdown__list" href="#">「Gateway」の導入　</a></li>                     
+                      <li><hr class="dropdown-divider dropdown__list"></li>
+                      <li><a class="dropdown-item dropdown__list" href="#">サイトの使い方　</a></li>
+                      <li><a class="dropdown-item dropdown__list" href="#">サイト使用時の注意　</a></li>
+                      <li><a class="dropdown-item dropdown__list" href="#">サイト作成者より　</a></li> 
 
                     </ul>
                   </li>
