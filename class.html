@@ -25,20 +25,20 @@
       }
     </script>
     <style>
-      @media screen and (max-height: 500px) {
-        .smart_img {
-          display: none;
+        @media screen and (max-height: 500px) {
+            .smart_img {
+            display: none;
+            }
         }
-      }
-      html {
-        scroll-behavior: smooth;
-      }
+        html {
+            scroll-behavior: smooth;
+        }
 
-      .content {
-        padding-top: 64px;
-        margin-top: -64px;
-      }
-      		/* ポップアップウィンドウのスタイル */
+        .content {
+            padding-top: 64px;
+            margin-top: -64px;
+        }
+      	/* ポップアップウィンドウのスタイル */
 		.popup {
 			position: fixed;
 			top: 50%;
@@ -183,52 +183,77 @@
         <div class="max-w-sm rounded overflow-hidden shadow-xl mt-10 ml-10 md:w-50 sm:w-30 ">
             <img class="w-full" src="https://via.placeholder.com/200x100" alt="Sunset in the mountains">
             <div class="px-6 py-4 ">
-              <div class="font-bold text-xl mb-2" style="text-align: center;">- 年 - 組</div>
+              <div class="font-bold text-xl mb-2" style="text-align: center;">高校1-1「」</div>
               <p class="text-gray-700 text-base flex">
                 紹介文
               </p>
             </div>
-            <!-- ボタン -->
-            <!--onclick="openPopup()"-->
-            <div class="flex justify-center" onclick="openPopup1()">
-                <button type="button" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">詳しく見る</button>
+            <!-- モーダルウィンドウを表示するためのボタン -->
+            <div class="flex justify-center z-0" onclick="openModal()">
+                <button type="button" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-3 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">詳しく見る</button>
             </div>
-            <!-- ポップアップウィンドウ -->
-            <div id="popup1" class="popup" style="display: none;">
-                <!-- Modal header -->
-                <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                        - 年 - 組
-                    </h3>
-                    <button onclick="closePopup1()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="staticModal">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>  
-                    </button>
+            <!-- モーダルウィンドウ -->
+            <div class="modal fixed w-full h-full top-0 left-0 flex items-center justify-center hidden  z-50">
+            <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+            
+            <div class="modal-container bg-white w-10/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+                <div class="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50">
                 </div>
-                <!-- Modal body -->
-                <div class="p-6 space-y-6">
-                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                        Sorld are updating their terms of service agreements to comply.
-                    </p>
+                
+                <!-- Add your modal content here -->
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                            高校1-1「」
+                        </h3>
+                        <button onclick="closeModal()" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-6 space-y-6">
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            あああ
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="flex justify-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                        <button onclick="closeModal()"  data-modal-hide="defaultModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">閉じる</button>
+                    </div>
                 </div>
-                <!-- Modal footer -->
             </div>
-            <!-- 背景 -->
-            <div id="popup-overlay" class="popup-overlay"></div>
-            <script>
-                function openPopup1() {
-                    document.getElementById("popup1").style.display = "block";
-                    document.getElementById("popup-overlay").style.display = "block";
-                }
+            </div>
 
-                function closePopup1() {
-                    document.getElementById("popup1").style.display = "none";
-                    document.getElementById("popup-overlay").style.display = "none";
-                }
+            <script>
+            function openModal() {
+            document.querySelector('.modal').classList.remove('hidden');
+            }
+
+            function closeModal() {
+            document.querySelector('.modal').classList.add('hidden');
+            }
+
+            document.querySelectorAll('.modal-overlay, .modal-close').forEach(function(el) {
+            el.addEventListener('click', function() {
+                closeModal();
+            });
+            });
+
+            document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+            });
             </script>
+
+
             <div class="px-6 pt-4 pb-2">
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#タグ1</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#タグ2</span>
-              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#タグ3</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">1校舎</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">-階</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">----教室</span>
             </div>
         </div>
       
