@@ -44,7 +44,9 @@
     <div x-data="setup()" x-init="$refs.loading.classList.add('hidden');">
       <div>
         <!-- Loading screen -->
-        <div x-ref="loading" class="fixed inset-0 z-50 flex items-center justify-center text-2xl font-semibold text-white bg--600">Loading.....</div>
+        <div x-ref="loading" class="fixed inset-0 z-50 flex items-center justify-center text-2xl font-semibold text-white bg--600">
+          
+        </div>
         <!-- Sidebar -->
         <div x-transition:enter="transform transition-transform duration-300" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="transform transition-transform duration-300" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full" x-show="isSidebarOpen" class="fixed inset-y-0 z-10 flex w-80">
           <!-- Curvy shape -->
@@ -84,7 +86,7 @@
                   <span>→ 投票企画について</span>
               </a>
               <a href="#virus" @click="isSidebarOpen = false" class="flex items-center space-x-2 px-4 text-sm py-2 font-base">
-                  <span>→ 感染対策について</span>
+                  <span>→ ご注意・感染対策</span>
               </a>
               <a href="#way" @click="isSidebarOpen = false" class="flex items-center space-x-2 px-4 text-sm py-2 pb-4 font-base">
                   <span>→ ご来校の方へ</span>
@@ -184,12 +186,19 @@
           <p class="leading-relaxed mb-5 text-gray-600" id="vote">あああ</p>
         </div>
       </div>
+      
     </section>
     <section class="text-gray-600 body-font relative bg-gradient-to-r from-purple-200 via-pink-200 to-red-300 ..." id="virus">
-      <p class="text-3xl text-gray-500 dark:text-white px-8 pt-10 pb-5 font-bold" style="content: heading;" >栄東祭・投票企画</p>
+      <p class="text-3xl text-gray-500 dark:text-white pl-8 pt-10 pb-5 font-bold" style="content: heading;" >栄東祭・投票企画</p>
     </section>
     <section class="text-gray-600 body-font relative bg-gray-100">
-      <p class="text-4xl text-gray-500 dark:text-white px-8 pt-10 pb-5 font-bold" style="content: heading;" id="way">感染対策について</p>
+      <p class="text-4xl text-gray-500 dark:text-white pl-8 pt-10 pb-5 font-bold" style="content: heading;" id="way">ご注意・感染対策</p>
+      <ol class="list-decimal">
+        <li><p class="text-sm text-gray-900 font-thin dark:text-white pl-12 ">1. 体調が悪くなった方は保健室までお越しください.</p></li>
+        <li><p class="text-sm text-gray-900 font-thin dark:text-white pl-12 pr-4 pt-4">2. ペットの同伴（介助犬・盲導犬は除く）はご遠慮ください.</p></li>
+        <li><p class="text-sm text-gray-900 font-thin dark:text-white pl-12 pr-4">1. 体調が悪くなった方は保健室までお越しください.</p></li>
+      </ol>
+      
     </section>
     <section class="text-gray-600 body-font relative">
       <p class="text-4xl text-gray-500 dark:text-white px-8 pt-10 font-bold" style="content: heading;" >ご来校の方法</p>
@@ -249,7 +258,7 @@
                 <a href="index.html#vote" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">投票企画について</a>
               </div>
               <div>
-                <a href="index.html#virus" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">感染対策について</a>
+                <a href="index.html#virus" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">ご注意・感染対策</a>
               </div>
               <div>
                 <a href="index.html#way" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">ご来校の方へ</a>
@@ -270,7 +279,7 @@
                 <a href="class.html#1-1to8" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">高1・1-8組</a>
               </div>         
               <div>
-                <a href="class.html#1-9to13" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">高1・9-13組</a>
+                <a href="class.html#1-9to13" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">高1・9-14組</a>
               </div>         
               <div>
                 <a href="class.html#2-1to9" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">高2・1-9組</a>
@@ -324,6 +333,5 @@
     <a href="#" class="shadow-xl" style="z-index: 99;">
       <button class="fixed bottom-4 right-4 bg-gray-500 hover:bg-gray-700 text-white py-2 px-4 rounded-full">↑</button>
     </a>
-
   </body>
 </html>
