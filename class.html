@@ -2470,7 +2470,7 @@
                 <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">1503教室</span>
                 </div>
             </div>
-            <!--高校1-8--><!--高校1-8--><!--高校1-8--><!--高校1-8--><!--高校1-8-->
+            <!--高校1-7--><!--高校1-7--><!--高校1-7--><!--高校1-7--><!--高校1-7-->
             <div class="max-w-sm rounded overflow-hidden shadow-xl mt-10 ml-10 md:w-50 sm:w-30 ">
                 <div class="flex justify-center items-center">
                     <img class="" src="imgs/1-8_img.png" width="200px" height="100px" alt="1-8_img">
@@ -2478,7 +2478,7 @@
                 <div class="px-6 py-4 ">
                 <div class="font-bold text-xl mb-2" style="text-align: center;">高校1-8</div>
                 <p class="text-gray-700 text-base flex">
-                    射的×アトラクション
+                    SHooting attraction
                 </p>
                 </div>
                 <!-- モーダルウィンドウを表示するためのボタン -->
@@ -2509,66 +2509,66 @@
                         <div class="space-y-6">
 
                                 <img src="imgs/1-8arimg.png" />
-                            <div id="json-data" class="px-2"></div>
-                            <script>
-                                // GitHubのAPIからJSONデータを取得する
-                                fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
-                                .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
-                                .then(data => {
-                                    // JSONデータから値を取得する
-                                    const jsonValue8 = data.values[8][1]; // 例としてpublic_reposの値を取得
-
-                                    // 条件分岐を使って画像のパスを生成する
-                                    let imgPath8;
-                                    console.log(jsonValue8);
-                                    imgPathBase8 = "https://raw.githubusercontent.com/tchn1gist/sh-fes.com/main/";
-                                    imgAlt8 = '';
-                                    switch (jsonValue8) {
-                                        case "1":
-                                            imgPath8 = imgPathBase8 + "1.png";
-                                            imgAlt8 = '空いている';
-                                            break;
-                                        case "2":
-                                            imgPath8 = imgPathBase8 + "2.png";
-                                            imgAlt8 = '空いている';
-                                            break;
-                                        case "3":
-                                            imgPath8 = imgPathBase8 + "3.png";
-                                            imgAlt8 = '普通';
-                                            break;
-                                        case "4":
-                                            imgPath8 = imgPathBase8 + "4.png";
-                                            imgAlt8 = '混んでいる';
-                                            break;
-                                        case "5":
-                                            imgPath8 = imgPathBase8 + "5.png";
-                                            imgAlt8 = 'とても混んでいる';
-                                            break;
-                                        default:
-                                            imgPath8 = ""; // 対応する画像がない場合には空の文字列を設定
-                                            break;
-                                    }
+                                <div id="json-data" class="px-2"></div>
+                                <script>
+                                    // GitHubのAPIからJSONデータを取得する
+                                    fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+                                    .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+                                    .then(data => {
+                                        // JSONデータから値を取得する
+                                        const jsonValue8 = data.values[8][1]; // 例としてpublic_reposの値を取得
+                    
+                                        // 条件分岐を使って画像のパスを生成する
+                                        let imgPath8;
+                                        console.log(jsonValue8);
+                                        imgPathBase8 = "https://raw.githubusercontent.com/tchn1gist/sh-fes.com/main/";
+                                        imgAlt8 = '';
+                                        switch (jsonValue8) {
+                                            case "1":
+                                                imgPath8 = imgPathBase8 + "1.png";
+                                                imgAlt8 = '空いている';
+                                                break;
+                                            case "2":
+                                                imgPath8 = imgPathBase8 + "2.png";
+                                                imgAlt8 = '空いている';
+                                                break;
+                                            case "3":
+                                                imgPath8 = imgPathBase8 + "3.png";
+                                                imgAlt8 = '普通';
+                                                break;
+                                            case "4":
+                                                imgPath8 = imgPathBase8 + "4.png";
+                                                imgAlt8 = '混んでいる';
+                                                break;
+                                            case "5":
+                                                imgPath8 = imgPathBase8 + "5.png";
+                                                imgAlt8 = 'とても混んでいる';
+                                                break;
+                                            default:
+                                                imgPath8 = ""; // 対応する画像がない場合には空の文字列を設定
+                                                break;
+                                        }
+                                        
+                                        // 画像が存在する場合はHTMLを生成する
+                                        let imageHtml8;
+                                        if (imgPath8) {
+                                            imageHtml8 = `<img src="${imgPath8}" alt="${imgAlt8}" width="60px">`;
+                                            console.log('8成功');
+                                        } else {
+                                            imageHtml8 = ""; // 画像が存在しない場合には空の文字列を設定
+                                            console.log('8エラー');
+                                        }
+                    
+                                         // 例: <img src="./images/3.jpg" alt="画像">
+                                         let crowdDiv8 = document.getElementById("crowding8");
+                                         crowdDiv8.innerHTML = imageHtml8;
+                                         
+                                    })
+                                    .catch(error => console.error(error));
                                     
-                                    // 画像が存在する場合はHTMLを生成する
-                                    let imageHtml8;
-                                    if (imgPath8) {
-                                        imageHtml8 = `<p class="px-3">ただいまの混雑度<img src="${imgPath8}" alt="${imgAlt8}" width="60px"></p>`;
-                                        console.log('8成功');
-                                    } else {
-                                        imageHtml8 = ""; // 画像が存在しない場合には空の文字列を設定
-                                        console.log('8エラー');
-                                    }
-
-                                     // 例: <img src="./images/3.jpg" alt="画像">
-                                     let crowdDiv8 = document.getElementById("crowding8");
-                                     crowdDiv8.innerHTML = imageHtml8;
-                                     
-                                })
-                                .catch(error => console.error(error));
-                                
-
-                            </script>
-                            <div id="crowding8" class="px-3"></div>
+                    
+                                </script>
+                                <div id="crowding8" class="px-3"></div>
                         </div>
                         <!-- Modal footer -->
                         <div class="flex justify-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
@@ -4391,7 +4391,7 @@
             <!--高校2-8--><!--高校2-8--><!--高校2-8--><!--高校2-8--><!--高校2-8-->
             <div class="max-w-sm rounded overflow-hidden shadow-xl mt-10 ml-10 md:w-50 sm:w-30 ">
                 <div class="flex justify-center items-center">
-                    <img class="" src="imgs/2-8_img.png" width="200px" height="100px" alt="1-8_img">
+                    <img class="" src="imgs/2-8_img.png" width="200px" height="100px" alt="2-8_img">
                 </div>
                 <div class="px-6 py-4 ">
                 <div class="font-bold text-xl mb-2" style="text-align: center;">高校2-8</div>
@@ -4404,7 +4404,7 @@
                     <button type="button" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-3 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">詳しく見る</button>
                 </div>
                 <!-- モーダルウィンドウ -->
-                <div class="moda22 fixed w-full h-full top-0 left-0 flex items-center justify-center hidden  z-50">
+                <div class="modal22 fixed w-full h-full top-0 left-0 flex items-center justify-center hidden  z-50">
                 <div class="modal-overlay22 absolute w-full h-full bg-gray-900 opacity-50"></div>
                 
                 <div class="modal-container bg-white w-10/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
@@ -6396,7 +6396,7 @@
                     
                                          // 例: <img src="./images/3.jpg" alt="画像">
                                          let crowdDiv65 = document.getElementById("crowding65");
-                                         crowdDiv65.innerHTML = imageHtml64;
+                                         crowdDiv65.innerHTML = imageHtml65;
                                          
                                     })
                                     .catch(error => console.error(error));
