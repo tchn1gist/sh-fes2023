@@ -4579,6 +4579,71 @@
     <p class="text-center text-md">講堂棟1/2階</p>
     
 </div>
+      <div class="max-w-sm rounded overflow-hidden shadow-2xl mt-10 ml-10 md:w-50 sm:w-30 p-5">
+    <p class="text-center">CCH</p>
+    <div id="json-data" class="px-2"></div>
+    <script>
+        // GitHubのAPIからJSONデータを取得する
+        fetch('https://sheets.googleapis.com/v4/spreadsheets/13smjCTnxG2JylNTl-dXX02qWH3pTKb7jn-e5U70FjCk/values/%E3%82%B7%E3%83%BC%E3%83%881?key=AIzaSyDizCHZ_NL5wwL9EeMMEWGIvt3x8Yru2q0')
+        .then(response => response.json()) // JSONデータをJavaScriptオブジェクトに変換する
+        .then(data => {
+            // JSONデータから値を取得する
+            const jsonValue70 = data.values[20][4]; // 例としてpublic_reposの値を取得
+
+            // 条件分岐を使って画像のパスを生成する
+            let imgPath70;
+            console.log(jsonValue70);
+            imgPathBase70 = "https://raw.githubusercontent.com/tchn1gist/sh-fes.com/main/";
+            imgAlt70 = '';
+            switch (jsonValue70) {
+                case "1"
+                    imgPath70 = imgPathBase70 + "1.png";
+                    imgAlt70 = '空いている';
+                    break;
+                case "2":
+                    imgPath70 = imgPathBase70 + "2.png";
+                    imgAlt70 = '空いている';
+                    break;
+                case "3":
+                    imgPath70 = imgPathBase70 + "3.png";
+                    imgAlt70 = '普通';
+                    break;
+                case "4":
+                    imgPath70 = imgPathBase70 + "4.png";
+                    imgAlt70 = '混んでいる';
+                    break;
+                case "5":
+                    imgPath70 = imgPathBase70 + "5.png";
+                    imgAlt70 = 'とても混んでいる';
+                    break;
+                default:
+                    imgPath70 = ""; // 対応する画像がない場合には空の文字列を設定
+                    break;
+            }
+            
+            // 画像が存在する場合はHTMLを生成する
+            let imageHtml70;
+            if (imgPath70) {
+                imageHtml70 = `<img src="${imgPath70}" alt="${imgAlt70}" width="60px">`;
+                console.log('70成功');
+            } else {
+                imageHtml70 = ""; // 画像が存在しない場合には空の文字列を設定
+                console.log('70エラー');
+            }
+
+             // 例: <img src="./images/3.jpg" alt="画像">
+             let crowdDiv69 = document.getElementById("crowding70");
+             crowdDiv70.innerHTML = imageHtml70;
+             
+        })
+        .catch(error => console.error(error));
+        
+
+    </script>
+    <div id="crowding70" class="px-3"></div>
+    <p class="text-center text-md">3校舎2階</p>
+    
+</div>
     <!--footer - start-->
     <div class="bg-black">
       <footer class="mx-auto max-w-screen-2xl px-4 md:px-8 py-6">
